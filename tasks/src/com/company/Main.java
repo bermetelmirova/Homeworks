@@ -7,6 +7,16 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        System.out.print("1. Task A\n2. Task B\nВведите номер:");
+        int choice = sc.nextInt();
+        if (choice == 1) {
+            taskA();
+        } else {
+            taskB();
+        }
+    }
+
+    static void taskA() {
         Parrot parrot1 = new Parrot();
         Parrot parrot2 = new Parrot();
         Dog dog1 = new Dog();
@@ -66,13 +76,26 @@ public class Main {
         fish2.setSpecies("РЫБА");
         fish2.setAge(3);
 
-        System.out.printf("Попугаи:\nКличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", parrot1.getName(),parrot1.getColor(),parrot1.getSpecies(), parrot1.getAge() );
-        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", parrot2.getName(),parrot2.getColor(),parrot2.getSpecies(), parrot2.getAge() );
-        System.out.printf("Собаки:\nКличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", dog1.getName(),dog1.getColor(),dog1.getSpecies(), dog1.getAge() );
-        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", dog2.getName(),dog2.getColor(),dog2.getSpecies(), dog2.getAge() );
-        System.out.printf("Коты:\n Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", cat1.getName(),cat1.getColor(),cat1.getSpecies(), cat1.getAge() );
-        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", cat2.getName(),cat2.getColor(),cat2.getSpecies(), cat2.getAge() );
-        System.out.printf("Рыбы:\nКличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", fish1.getName(),fish1.getColor(),fish1.getSpecies(), fish1.getAge() );
-        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", fish2.getName(),fish2.getColor(),fish2.getSpecies(), fish2.getAge() );
+        System.out.printf("Попугаи:\nКличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", parrot1.getName(), parrot1.getColor(), parrot1.getSpecies(), parrot1.getAge());
+        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", parrot2.getName(), parrot2.getColor(), parrot2.getSpecies(), parrot2.getAge());
+        System.out.printf("Собаки:\nКличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", dog1.getName(), dog1.getColor(), dog1.getSpecies(), dog1.getAge());
+        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", dog2.getName(), dog2.getColor(), dog2.getSpecies(), dog2.getAge());
+        System.out.printf("Коты:\n Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", cat1.getName(), cat1.getColor(), cat1.getSpecies(), cat1.getAge());
+        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", cat2.getName(), cat2.getColor(), cat2.getSpecies(), cat2.getAge());
+        System.out.printf("Рыбы:\nКличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", fish1.getName(), fish1.getColor(), fish1.getSpecies(), fish1.getAge());
+        System.out.printf("Кличка: %s\nЦвет: %s\nВид: %s\nВзраст: %s\n\n", fish2.getName(), fish2.getColor(), fish2.getSpecies(), fish2.getAge());
+    }
+
+    static void taskB() {
+        Course java = new Course("JV","18/03/21",21,"Nursultan Taalaibekov");
+        Student [] students = new Student[2];
+        students[0] = new Student("Bermet","Elmirova","30.12.01","Female",19);
+        students[1] = new Student("Nurdin","Ulan u","22.12.00","Male",20);
+        Group group = new Group(students, java, "18/03/21", 9);
+        System.out.printf(" Название курса: %s\n Дата создания: %s\n ID: %s\n Преподаватель: %s\n\n", java.getName(), java.getDateOfCreation(), java.getID(), java.getMentorName());
+        for (int i = 0; i < students.length; i++) {
+            System.out.printf(" Имя: %s\n Фамилия: %s\n Дата рождения: %s\n Пол: %s\n Возраст: %s\n\n", students[i].getFirstName(),students[i].getLastName(), students[i].getDateOfBirth(), students[i].getGender(),students[i].getAge());
+        }
+        System.out.printf(" Дата начала: %s\n Длительность: %s\n\n", group.getDateOfStart(), group.getDuration());
     }
 }
