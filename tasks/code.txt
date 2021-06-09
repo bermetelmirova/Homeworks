@@ -1,0 +1,21 @@
+package com.company;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Main {
+    static Scanner sc = new Scanner(System.in);
+    static Random random = new Random();
+
+    public static void main(String[] args) {
+        Cat[] cats = new Cat[3];
+        cats[0] = new Cat("kitty");
+        cats[1] = null;
+        cats[2] = new Cat("pinky");
+    }
+}
