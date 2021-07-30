@@ -1,0 +1,25 @@
+create table sport (
+id_sport integer primary key,
+type_sport varchar(50) not null,
+payment integer not null
+);
+
+create table coach(
+id_coach integer primary key,
+full_name varchar(50) not null,
+type_sport integer references sport(id_sport),
+phone_number integer unique,
+inn varchar(50) unique not null
+);
+
+insert into sport (id_sport, type_sport, payment)
+values(1, 'Football', 15000),
+(2, 'Valleyball', 10000),
+(3, 'Taekwandoo', 15000),
+(4, 'Swimming', 13000);
+
+inert into coach(id_coach, full_name, type_sport, phone_number, inn)
+values(1, 'Carlo Anchelotti',1, 771604708, '4545'),
+(2,'Bebe Rexha',2,771604708,'1212'),
+(3,'Jutin Biber', 4, 772556123, '1515')
+(4, 'Lana Del Rey', 4, 776567899, '6666');
