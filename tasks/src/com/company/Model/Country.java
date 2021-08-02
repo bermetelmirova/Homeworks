@@ -1,10 +1,20 @@
-package com.company;
+package com.company.Model;
+
 
 public class Country {
     private int id_country;
     private String name_country;
     private int population;
     private String prezident;
+    private String state_language;
+
+    public void setState_language(String state_language) {
+        this.state_language = state_language;
+    }
+
+    public String getState_language() {
+        return state_language;
+    }
 
     public Country() {
     }
@@ -48,4 +58,13 @@ public class Country {
         this.prezident = prezident;
     }
 
+    @Override
+    public String toString() {
+        return "Country{" +
+                "id_country=" + id_country +
+                ", name_country='" + name_country + '\'' +
+                ", population=" + population +
+                ", prezident='" + prezident + '\'' +
+                '}';
+    }
 }
