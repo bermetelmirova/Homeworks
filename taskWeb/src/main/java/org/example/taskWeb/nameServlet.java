@@ -10,7 +10,7 @@ import java.io.IOException;
 public class nameServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String result = "Hello, " + req.getParameter("name");
+        String result = "Hello, " + req.getParameter("name") + "!!!";
         req.setAttribute("name", result);
         req.getRequestDispatcher("name.jsp").forward(req, resp);
     }

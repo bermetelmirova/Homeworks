@@ -1,2 +1,2 @@
 # Homeworks
-IT- Academy
+Домашка в папке tasks

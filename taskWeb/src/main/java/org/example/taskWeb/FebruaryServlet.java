@@ -12,11 +12,6 @@ import java.util.ArrayList;
 public class FebruaryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ArrayList <Integer> days = new ArrayList<>();
-        for (int i = 1; i <= 28; i++) {
-            days.add(i);
-        }
-        req.setAttribute("february", days);
         req.getRequestDispatcher("februaary.jsp").forward(req, resp);
     }
 }
