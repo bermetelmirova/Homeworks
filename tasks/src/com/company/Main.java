@@ -21,6 +21,7 @@ public class Main {
         iteratorASC(countrySet);
         System.out.println("ASC TREESET");
         iteratorASC(countryTreeSet);
+        countryTreeSet.removeIf(country -> country.getNameOfCountry().length() > 5);
         System.out.println("DESC");
         iteratorDesc(countryTreeSet);
     }
@@ -52,5 +53,8 @@ public class Main {
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
+    }
+    static void deleteCountry(Set<Country> countries){
+
     }
 }
