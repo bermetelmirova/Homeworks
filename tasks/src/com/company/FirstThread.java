@@ -1,11 +1,8 @@
 package com.company;
 
-public class FirstThread extends Thread{
-    private int number;
+import static com.company.Main.number;
 
-    public FirstThread(int number) {
-        this.number = number;
-    }
+public class FirstThread extends Thread{
 
     @Override
     public void run() {

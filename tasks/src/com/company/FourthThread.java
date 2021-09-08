@@ -1,14 +1,12 @@
 package com.company;
 
-public class FourthThread extends Thread{
-    private int number;
+import static com.company.Main.number;
 
-    public FourthThread(int number) {
-    }
+public class FourthThread extends Thread{
 
     @Override
     public void run() {
-        number = number - 2;
+        number -= 2;
         System.out.println(getName() + ". "+ number );
     }
 }

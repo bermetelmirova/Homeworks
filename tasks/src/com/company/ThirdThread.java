@@ -1,11 +1,8 @@
 package com.company;
 
-public class ThirdThread extends Thread{
-    private int number;
+import static com.company.Main.number;
 
-    public ThirdThread(int number) {
-        this.number = number;
-    }
+public class ThirdThread extends Thread{
 
     @Override
     public void run() {
