@@ -10,6 +10,7 @@ public class Main {
             }
             return y;
         };
+
         Calculation sqrt =(x, y) -> {
             for (int i = 0; i < y/2; i++) {
                 if(Math.pow(i, x) == y)
