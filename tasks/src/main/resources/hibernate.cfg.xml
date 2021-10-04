@@ -16,5 +16,6 @@
         <mapping class="com.company.entity.Countries"/>
         <mapping class="com.company.entity.Championship"/>
         <mapping class="com.company.entity.Teams"/>
+        <mapping class="com.company.entity.ChampionshipTeam"/>
     </session-factory>
 </hibernate-configuration>

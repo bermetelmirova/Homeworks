@@ -1,26 +1,26 @@
 package com.company.entity;
+
 import lombok.*;
 
 import javax.persistence.*;
 
+@Table(name = "championship_team")
 @Entity
-@Table(name = "championship")
 @Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Championship {
+
+public class ChampionshipTeam {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "country_id")
-    private Countries countryId;
-    @Column(nullable = false, unique = true)
-    private String name;
+    @JoinColumn(name = "championship_id")
+    private Championship championship;
     @ManyToOne
-    @JoinColumn(name = "sport_id")
-    private TypeOfSport sportId;
+    @JoinColumn(name = "team_id")
+    private Teams team;
 }

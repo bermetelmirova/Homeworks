@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Teams {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

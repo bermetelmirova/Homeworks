@@ -16,5 +16,5 @@ public class TypeOfSport {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(nullable = false, unique = true)
-    private String sport;
+    private String name;
 }
