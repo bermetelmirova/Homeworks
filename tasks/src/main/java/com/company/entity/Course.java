@@ -5,16 +5,16 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "type_of_sport")
-@Builder
+@Table(name = "course")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TypeOfSport {
+@Builder
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(nullable = false, unique = true)
-    private String sport;
+    @Column(name = "name")
+    private String name;
 }

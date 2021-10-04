@@ -3,6 +3,8 @@ package com.company.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.Arrays;
+
 public class HibernateUtil {
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
@@ -10,7 +12,7 @@ public class HibernateUtil {
         try {
             return new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
-            System.err.println("Session not created: " + ex);
+            System.err.println("Session not created: " + Arrays.toString(ex.getStackTrace()));
             throw new ExceptionInInitializerError(ex);
         }
     }
